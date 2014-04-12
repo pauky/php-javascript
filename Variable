@@ -1,0 +1,30 @@
+<?php
+  $test = 10;
+  function demo() {
+    $test += 10;
+  }
+  demo();
+  demo();
+  echo $test;//10
+?>
+
+<?php
+  $test = 10;
+  function demo() {
+    global $test;
+    $test += 10;
+  }
+  demo();
+  demo();
+  echo $test;//30
+?>
+
+javascript:
+
+var test = 10;
+function demo() {
+  test += 20;
+}
+demo();
+demo();
+alert(test);//50
