@@ -1,0 +1,26 @@
+//传入的多参数
+PHP:
+
+<?php
+	function test() {
+		$array = func_get_args();
+		for ($i = 0;$i < count($array);$i ++) {
+			$sum += $array[$i];
+		}
+		return $sum;
+	}
+	$s = test(1,2,3);
+	echo $s;//6
+?>
+
+javascript:
+
+function test() {
+var sum = 0;
+for (var i = 0;i < arguments.length;i ++) {
+	sum += arguments[i];
+}
+return sum;
+}
+s = test(1,2,3);
+alert(s);//6
