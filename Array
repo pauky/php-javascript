@@ -1,0 +1,4 @@
+//json
+var p = {name:"kk",age:10,sex:"man"};
+alert(p.name);//kk
+alert(p["age"]);//10
