@@ -28,3 +28,29 @@ var p = document.getElementById("p");
 value(p,"www");
 alert(value(p));
 </script>
+
+//内联样式 样式原有的“-”要去年，原“-”后的单词首字母大写
+<p id="p">kkk</p>
+<script>
+var p = document.getElementById("p");
+p.style.backgroundColor = "red";
+p.style.fontSize = "30px";
+</script>
+
+//外联样式 不能用.style获取到样式，要用特定的属性，具体根据DOM手册
+<style>
+#p {width:100px;}
+</style>
+<p id="p">kkk</p>
+<script>
+var p = document.getElementById("p");
+alert(p.offsetWidth);
+</script>
+
+
+
+
+
+
+
+
