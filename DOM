@@ -1,0 +1,30 @@
+//取表单的值
+<input id="u" type="text" value="kkk" />
+<textarea id="t">ttt</textarea>
+<script>
+var u = document.getElementById("u").value;
+var t = document.getElementById("t").value;
+alert(u);//kkk
+alert(t);//ttt
+</script>
+
+//取和修改一般元素里的值，兼容ie和ff
+<p id="p">kkk</p>
+<script>
+function value(obj,value) {
+  if (document.all) {   
+    if (typeof(value) == "undefined") 
+      return obj.innerText;
+    else 
+      return obj.innerText = value
+  }else {
+    if (typeof(value) == "undefined") 
+      return obj.textContent;
+    else
+      return obj.textContent = value;
+  }
+}
+var p = document.getElementById("p");
+value(p,"www");
+alert(value(p));
+</script>
