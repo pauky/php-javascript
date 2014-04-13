@@ -34,5 +34,16 @@ alert(p.width);//10
 p.autoPlay();//******
 
 
-
-
+//遍历对象 
+function Play() {
+  this.width = 10;
+  this.autoPlay = function() {
+    alert("******");
+  }
+}
+var p = new Play();
+for(var pro in p) {
+  document.write("p."+pro+"="+p[pro]+"<br />");
+}
+//p.width=10
+//p.autoPlay=function () { alert("******"); }
