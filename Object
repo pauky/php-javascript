@@ -1,0 +1,38 @@
+//javascript构建对象的三种方法
+
+function Play() {
+  this.width = 10;
+  this.autoPlay = function() {
+    alert("******");
+  }
+}
+var p = new Play();
+alert(p.width);10
+p.autoPlay();//******
+
+function Play() {
+  var p = new Object();
+  p.width = 10;
+  p.autoPlay = function() {
+    alert("******");
+  }
+  return p;
+}
+var p = Play();
+alert(p.width);//10
+p.autoPlay();//******
+
+function Play() {
+
+}
+var p =　new Play();
+p.width = 10;
+p.autoPlay = function() {
+  alert("******");
+}
+alert(p.width);//10
+p.autoPlay();//******
+
+
+
+
