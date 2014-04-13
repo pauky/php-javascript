@@ -47,3 +47,15 @@ for(var pro in p) {
 }
 //p.width=10
 //p.autoPlay=function () { alert("******"); }
+
+//省略对象
+function Play() {
+  this.width = 10;
+  this.autoPlay = function() {
+    alert("******");
+  }
+}
+var p = new Play();
+with(p) {
+  alert(width);
+}
