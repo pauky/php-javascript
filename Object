@@ -34,7 +34,7 @@ alert(p.width);//10
 p.autoPlay();//******
 
 
-//遍历对象 
+//遍历对象属性
 function Play() {
   this.width = 10;
   this.autoPlay = function() {
@@ -59,3 +59,23 @@ var p = new Play();
 with(p) {
   alert(width);
 }
+
+//访问对象的七种方法
+<form name="frm">
+<input name="u" value="pauky" />
+</form>
+<script>
+  alert(document.frm.u.value);
+  alert(document["frm"].u.value);
+  alert(document.forms[0].u.value);
+  alert(document.forms["frm"].value);
+  alert(document.forms.item(0).value);
+  alert(document.forms.item("frm").value);
+  alert(document.forms.frm.u.value);
+  //弹出七个pauky
+</script>
+
+
+
+
+
